@@ -281,15 +281,6 @@ section:not(#hero) {
 }
 
 .promo-banner {
-    background-color: var(--coconut-brown-color-light);
-    color: var(--body-color-2);
-    font-weight: var(--weight-bold-m);
-    padding: 8px;
-    text-align: center;
-    display: block;
-}
-
-/* .promo-banner2 {
     background-color: var(--white-color);
     width: 100%;
     display: grid;
@@ -297,7 +288,7 @@ section:not(#hero) {
     text-align: center;
     place-items: center;
     grid-template-columns: repeat(3, 1fr);
-} */
+}
 
 .banner {
     padding: 16px;
