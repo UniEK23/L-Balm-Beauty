@@ -92,7 +92,7 @@ body {
 }
 
 main {
-    min-width: 340px;
+    min-width: 360px;
 }
 
 header {
@@ -160,11 +160,16 @@ section:not(#hero) {
     background-color: var(--secondary-color);
     padding: 2em;
     width: 50%;
-    z-index: 9;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
 }
 
 .navigation ul {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 }
 
 .navigation a {
@@ -172,6 +177,22 @@ section:not(#hero) {
     display: block;
     margin-bottom: 2em;
     text-align: center;
+}
+
+.close-menu {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0.5em;
+    color: var(--text-color-dark);
+    transition: ease 0.5s;
+}
+
+.close-menu:hover {
+    background-color: var(--body-color);
+    color: var(--white-color);
 }
 
 .user-icons {
@@ -223,12 +244,10 @@ section:not(#hero) {
 
 
 /* HERO */
-/* #hero {
-    width: 100%;
+#hero {
     height: 100vh;
     position: relative;
-    overflow: hidden;
-} */
+}
 
 .hero-content {
     display: grid;
@@ -255,6 +274,9 @@ section:not(#hero) {
     object-fit: cover;
     z-index: 20;
     filter: blur(4px);
+    position: relative;
+    width: 100%;    /* **** */
+    height: 100vh;   /* **** */
     /* display: none; */
 }
 
@@ -288,6 +310,11 @@ section:not(#hero) {
     text-align: center;
     place-items: center;
     grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    position: absolute;
+    border-bottom: 1px solid var(--gray-color-light);
+    bottom: 0;
+    z-index: 30;
 }
 
 .banner {
@@ -311,7 +338,8 @@ section:not(#hero) {
 .container {
     /* border: 1px solid; */
     /* margin-inline: 1.5rem; */
-    max-width: 640px;
+    min-width: 360px;
+    overflow: hidden;
 }
 
 .grid {
@@ -323,9 +351,8 @@ section:not(#hero) {
 }
 
 .card {
-    border-radius: 16px;
+    border-radius: 8px;
     transition: ease 0.5s;
-    background: var(--blush);
     box-shadow: 0 0px 6px 1px var(--gray-color-light);
 }
 
@@ -339,19 +366,20 @@ section:not(#hero) {
     width: 100%;
     height: 100%;
     object-position: center;
-    border-radius: 16px 16px 0 0;
+    border-radius: 8px 8px 0 0;
 }
 
 .info {
     padding: 1rem 0;
     text-align: center;
-    border-radius: 0 0 16px 16px;
+    border-radius: 0 0 8px 8px;
+    background: var(--blush);
 }
 
 /* BEST SELLERS */
 .product-info {
     padding: 1rem;
-    border-radius: 0 0 16px 16px;
+    border-radius: 0 0 8px 8px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -402,10 +430,11 @@ section:not(#hero) {
 /* BEST SELLERS 2 */
 .grid-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 200px 200px;
     grid-auto-rows: 1fr;
     padding: 1rem;
-    gap: 1rem;
+    gap: 2rem;
+    place-content: center;
 }
 
 
