@@ -1,706 +1,512 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>L'Balm Beauty</title>
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Skincare & Cosmetics — L'Balm Beauty</title>
+    <meta
+      name="description"
+      content="Luxury skincare and cosmetics crafted for confidence and radiance."
+    />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/lbalm_home.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+  </head>
 
-        <!-- FONTS -->
+  <body data-page="home" data-nav="home">
+    <a class="skip" href="#main">Skip to content</a>
 
-        <!-- PLAYFAIR -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <div class="announce">
+      <p>Complimentary delivery on orders over ₦50,000</p>
+    </div>
 
-        <!-- POPPINS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        
-        <link rel="stylesheet" href="/css/lbalm_home.css">
-    </head>
+    <header class="site-header">
+      <div class="header-container">
+        <button
+          class="hamburger icon"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <i class="ri-menu-line"></i>
+        </button>
+
+        <nav class="navigation" aria-label="Main">
+          <button class="close-menu icon" aria-label="Close menu">
+            <i class="ri-close-large-line"></i>
+          </button>
+
+          <ul>
+            <li><a href="lbalm.html" data-nav="home">Home</a></li>
+            <li><a href="shop.html" data-nav="shop">Shop</a></li>
+            <li>
+              <a href="collections.html" data-nav="collections">Collections</a>
+            </li>
+            <li><a href="about.html" data-nav="about">About</a></li>
+            <li><a href="contact.html" data-nav="contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="logo-container">
+          <a href="lbalm.html" aria-label="L'Balm Beauty home"
+            ><span class="logo">L'BALM</span
+            ><span class="logo-subline">BEAUTY</span></a
+          >
+        </div>
+
+        <div class="user-icons">
+          <button
+            class="search-icon icon"
+            aria-label="Search"
+            aria-expanded="false"
+          >
+            <i class="ri-search-2-line"></i>
+          </button>
+
+          <a href="login.html" class="icon" aria-label="Account"
+            ><i class="ri-user-line"></i
+          ></a>
+
+          <a href="cart.html" class="icon cart-link" aria-label="Shopping bag"
+            ><i class="ri-shopping-bag-4-line"></i
+            ><span class="cart-count" hidden>0</span></a
+          >
+        </div>
+      </div>
+
+      <div class="search-box" hidden>
+        <form class="search-form" role="search">
+          <input
+            type="search"
+            class="search-input"
+            placeholder="Search serums, lipsticks, fragrances…"
+            aria-label="Search products"
+            autocomplete="off"
+          />
+          <ul class="search-results"></ul>
+        </form>
+      </div>
+    </header>
+
+    <div class="nav-overlay"></div>
     
-    <body>
-        <header>
-            <div class="hero-promo"><p>FREE SHIPPING!!</p></div>
-            <div class="header-container">
-                <i class="ri-menu-line hamburger icon"></i>
-
-                <div class="logo-container">
-                    <a href="#">
-                        <span class="logo">L'BALM<br /></span>
-                        <span class="logo-subline">BEAUTY</span>
-                    </a>
-                </div>
-
-                <nav class="navigation">
-                    <div class="hamburger">
-                        <i class="ri-close-large-line close-menu icon"></i>
-                    </div>
-
-                    <ul>
-                        <li><a href="lbalm.html">HOME</a></li>
-                        <li><a href="shop.html">SHOP</a></li>
-                        <li><a href="collections.html">COLLECTIONS</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
-                    </ul>
-                </nav>
-
-                <div class="user-icons">
-                    <div class="close-button">
-                        <i class="ri-search-2-line search-icon icon"></i>
-                        <i class="ri-close-fill search-close icon"></i>
-                    </div>
-                    
-                    <a href="/html/login.html">
-                        <i class="ri-user-line account icon"></i>
-                    </a>
-                    <a href="#">
-                        <i class="ri-shopping-bag-4-line cart icon"></i>
-                    </a>
-                </div>
-                
-
-                <div class="search-box">
-                    <form class="search-form">
-                        <input type="text" placeholder="Search..." class="search-input" />
-                    </form>
-                </div>
+    <main id="main">
+      <section id="hero">
+        <div class="container hero-content">
+          <div class="hero-intro">
+            <span class="eyebrow">Luxury skincare &amp; cosmetics</span>
+            <h1>Beauty that glows <em>beyond the mirror</em></h1>
+            <p class="intro-p">
+              Luxury skincare and cosmetics crafted for confidence and radiance.
+            </p>
+            <div class="cta-buttons">
+              <a href="collections.html" class="cta shop">Shop collections</a
+              ><a href="shop.html" class="cta outline explore"
+                >Explore products</a
+              >
             </div>
-        </header>
-
-        <main>
-            <section id="hero" class="hero-section container">
-                <div class="hero-content">
-                    <div class="hero-intro">
-                        <h1>BEAUTY THAT GLOWS BEYOND THE MIRROR</h1>
-
-                        <p class="intro-p">Luxury skincare and cosmetics crafted for confidence and radiance.</p>
-
-                        <div class="cta-buttons">
-                            <a href="collections.html" class="cta shop">SHOP COLLECTIONS</a>
-                            <a href="shop.html" class="cta explore">EXPLORE PRODUCTS</a>
-                        </div>
-                    </div>
-
-                    <img src="../assets/images/hero-image-removebg.png" alt="L'Balm Beauty Products" class="hero-image" />
-                </div>
-
-                <div class="promo-banner">
-                    <div class="free-shipping banner">
-                        <p class="free-ship head">Free Shipping</p>
-                        <p class="descr">Orders over N50K</p>
-                    </div>
-
-                    <div class="quality-guarantee banner">
-                        <p class="quality head">100% Authentic</p>
-                        <p class="descr">Quality products</p>
-                    </div>
-
-                    <div class="secure-guarantee banner">
-                        <p class="secure head">Secure Payment</p>
-                        <p class="descr">100% secure</p>
-                    </div>
-                </div>
-            </section>
-
-
-            <section id="category" class="container">
-                <h2>Shop by Category</h2>
-                <!-- <div class="grid">
-                    <div class="first-category card">
-                        <a href="#">
-                            <div class="img">
-                                <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image" />
-                            </div>
-
-                            <div class="info">
-                                <h3>Skincare</h3>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="first-category card">
-                        <a href="#">
-                            <div class="img">
-                                <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image" />
-                            </div>
-
-                            <div class="info">
-                                <h3>Makeup</h3>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="first-category card">
-                        <a href="#">
-                            <div class="img">
-                                <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image" />
-                            </div>
-
-                            <div class="info">
-                                <h3>Haircare</h3>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="first-category card">
-                        <a href="#">
-                            <div class="img">
-                                <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image" />
-                            </div>
-
-                            <div class="info">
-                                <h3>Fragrance</h3>
-                            </div>
-                        </a>
-                    </div>                
-                </div> -->
-
-
-                <div class="grid-2">
-                    <div class="first-category card">
-                        <a href="#">
-                            <div class="img">
-                                <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image" />
-                            </div>
-
-                            <div class="info">
-                                <h3>Skincare</h3>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="first-category card">
-                        <a href="#">
-                            <div class="img">
-                                <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image" />
-                            </div>
-
-                            <div class="info">
-                                <h3>Makeup</h3>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="first-category card">
-                        <a href="#">
-                            <div class="img">
-                                <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image" />
-                            </div>
-
-                            <div class="info">
-                                <h3>Haircare</h3>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="first-category card">
-                        <a href="#">
-                            <div class="img">
-                                <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image" />
-                            </div>
-
-                            <div class="info">
-                                <h3>Fragrance</h3>
-                            </div>
-                        </a>
-                    </div>                
-                </div>
-
-            </section>
-
-
-            <section id="best-sellers" class="container">
-                <h2>BEST SELLERS</h2>
-                <div class="grid">
-                    <article class="first-category card">
-                        <div class="img">
-                            <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image" />
-                        </div>
-
-                        <div class="product-info">
-                            <p class="product-name">Rose Glow Serum</p>
-                            <span class="product-price">₦18,000</span>
-                            <div class="review">
-                                <span class="stars">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-half-line"></i>
-                                </span>
-                                <span class="review-count">(30675)</span>
-                            </div>
-                            <a href="product1.html" class="cta-button">ADD TO CART</a>
-                        </div>
-                    </article>
-
-                    <article class="first-category card">
-                        <div class="img">
-                            <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image" />
-                        </div>
-
-                        <div class="product-info">
-                            <p class="product-name">Hydra Moisturizer</p>
-                            <span class="product-price">₦27,000</span>
-                            <div class="review">
-                                <span class="stars">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </span>
-                                <span class="review-count">(19035)</span>
-                            </div>
-                            <a href="product1.html" class="cta-button">ADD TO CART</a>
-                        </div>
-                    </article>
-
-                    <article class="first-category card">
-                        <div class="img">
-                            <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image" />
-                        </div>
-
-                        <div class="product-info">
-                            <p class="product-name">Velvet Matte Lipstick</p>
-                            <span class="product-price">₦15,500</span>
-                            <div class="review">
-                                <span class="stars">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-line"></i>
-                                </span>
-                                <span class="review-count">(14764)</span>
-                            </div>
-                            <a href="product1.html" class="cta-button">ADD TO CART</a>
-                        </div>
-                    </article>
-
-                    <article class="first-category card">
-                        <div class="img">
-                            <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image" />
-                        </div>
-
-                        <div class="product-info">
-                            <p class="product-name">L'Amour Perfume</p>
-                            <span class="product-price">₦30,000</span>
-                            <div class="review">
-                                <span class="stars">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </span>
-                                <span class="review-count">(24577)</span>
-                            </div>
-                            <a href="product1.html" class="cta-button">ADD TO CART</a>
-                        </div>
-                    </article>
-                </div>
-
-
-                <!-- <div class="grid-2">
-                    <article class="first-category card">
-                        <div class="img">
-                            <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image" />
-                        </div>
-
-                        <div class="product-info">
-                            <p class="product-name">Rose Glow Serum</p>
-                            <span class="product-price">₦18,000</span>
-                            <div class="review">
-                                <span class="stars">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </span>
-                                <span class="review-count">(120)</span>
-                            </div>
-                            <a href="product1.html" class="cta-button">ADD TO CART</a>
-                        </div>
-                    </article>
-
-                    <article class="first-category card">
-                        <div class="img">
-                            <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image" />
-                        </div>
-
-                        <div class="product-info">
-                            <p class="product-name">Rose Glow Serum</p>
-                            <span class="product-price">₦18,000</span>
-                            <div class="review">
-                                <span class="stars">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </span>
-                                <span class="review-count">(120)</span>
-                            </div>
-                            <a href="product1.html" class="cta-button">ADD TO CART</a>
-                        </div>
-                    </article>
-
-                    <article class="first-category card">
-                        <div class="img">
-                            <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image" />
-                        </div>
-
-                        <div class="product-info">
-                            <p class="product-name">Rose Glow Serum</p>
-                            <span class="product-price">₦18,000</span>
-                            <div class="review">
-                                <span class="stars">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </span>
-                                <span class="review-count">(120)</span>
-                            </div>
-                            <a href="product1.html" class="cta-button">ADD TO CART</a>
-                        </div>
-                    </article>
-
-                    <article class="first-category card">
-                        <div class="img">
-                            <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image" />
-                        </div>
-
-                        <div class="product-info">
-                            <p class="product-name">Rose Glow Serum</p>
-                            <span class="product-price">₦18,000</span>
-                            <div class="review">
-                                <span class="stars">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </span>
-                                <span class="review-count">(120)</span>
-                            </div>
-                            <a href="product1.html" class="cta-button">ADD TO CART</a>
-                        </div>
-                    </article>
-                </div> -->
-
-
-                <!-- <div class="grid-3">
-                    <article class="first-category card-3">
-                        <div class="img">
-                            <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image-3" />
-                        </div>
-
-                        <div class="product-info">
-                            <p class="product-name">Rose Glow Serum</p>
-                            <span class="product-price">₦18,000</span>
-                            <div class="review">
-                                <span class="stars">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </span>
-                                <span class="review-count">(120)</span>
-                            </div>
-                            <a href="product1.html" class="cta-button">ADD TO CART</a>
-                        </div>
-                    </article>
-
-                    <article class="first-category card-3">
-                        <div class="img">
-                            <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image-3" />
-                        </div>
-
-                        <div class="product-info">
-                            <p class="product-name">Rose Glow Serum</p>
-                            <span class="product-price">₦18,000</span>
-                            <div class="review">
-                                <span class="stars">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </span>
-                                <span class="review-count">(120)</span>
-                            </div>
-                            <a href="product1.html" class="cta-button">ADD TO CART</a>
-                        </div>
-                    </article>
-
-                    <article class="first-category card-3">
-                        <div class="img">
-                            <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image-3" />
-                        </div>
-
-                        <div class="product-info">
-                            <p class="product-name">Rose Glow Serum</p>
-                            <span class="product-price">₦18,000</span>
-                            <div class="review">
-                                <span class="stars">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </span>
-                                <span class="review-count">(120)</span>
-                            </div>
-                            <a href="product1.html" class="cta-button">ADD TO CART</a>
-                        </div>
-                    </article>
-
-                    <article class="first-category card-3">
-                        <div class="img">
-                            <img src="/assets/images/LoginImg.png" alt="Skincare Category" class="product-image-3" />
-                        </div>
-
-                        <div class="product-info">
-                            <p class="product-name">Rose Glow Serum</p>
-                            <span class="product-price">₦18,000</span>
-                            <div class="review">
-                                <span class="stars">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </span>
-                                <span class="review-count">(120)</span>
-                            </div>
-                            <a href="product1.html" class="cta-button">ADD TO CART</a>
-                        </div>
-                    </article>
-                </div> -->
-
-
-            </section>
-
-
-            <section id="why-us" class="container">
-                <h2>WHY CHOOSE L'BALM?</h2>
-
-                <div class="why-details">
-                    <div class="why-img">
-                        <img src="/assets/images/LoginImg.png" alt="Why Choose L'Balm" class="why-us-image" />
-                    </div>
-
-                    <div class="why-text">
-                        <div class="why-text-container">
-                            <div class="why-icon">
-                                <i class="ri-leaf-line leaf"></i>
-                            </div>
-
-                            <div class="why-descr">
-                                <span class="why-t head">Premium Ingredients</span>
-                                <p>Only the finest for your skin</p>
-                            </div>
-                        </div>
-
-                        <div class="why-text-container">
-                            <div class="why-icon">
-                                <i class="ri-flask-line"></i>
-                            </div>
-                            
-                            <div class="why-descr">
-                                <span class="why-t head">Dermatologist Tested</span>
-                                <p>Safe and effective for all skin types</p>
-                            </div>
-                        </div>
-                        
-                        <div class="why-text-container">
-                            <div class="why-icon">
-                                <i class="ri-leaf-line leaf"></i>
-                            </div>
-                            
-                            <div class="why-descr">
-                                <span class="why-t head">Premium Ingredients</span>
-                                <p>Only the finest for your skin</p>
-                            </div>
-                        </div>
-
-                        <div class="why-text-container">
-                            <div class="why-icon">
-                                <i class="ri-shopping-bag-3-line"></i>
-                            </div>
-                            
-                            <div class="why-descr">
-                                <span class="why-t head">Eco-Friendly Packaging</span>
-                                <p>Our packaging is made from sustainable materials</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <section id="customer-feedback" class="container">
-                <h2>WHAT OUR CUSTOMERS SAY</h2>
-                <div class="feedback-grid">
-                    <article class="feedback-card">
-                        <span class="stars">
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                        </span>
-
-                        <p>"I love L'Balm Beauty! Their products have transformed my skincare routine."</p>
-                        <span class="reviewer">- Jane Doe</span>
-                        
-                        <div>
-                            <img src="/assets/images/LoginImg.png" alt="Jane Doe" class="customer-img">
-                        </div>
-                    </article>
-
-                    <article class="feedback-card">
-                        <span class="stars">
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-line"></i>
-                        </span>
-
-                        <p>"The quality and authenticity of their products are unmatched."</p>
-                        <span class="reviewer">- John Smith</span>
-
-                        <div>
-                            <img src="/assets/images/LoginImg.png" alt="John Smith" class="customer-img">
-                        </div>
-                    </article>
-
-                    <article class="feedback-card">
-                        <span class="stars">
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-half-line"></i>
-                        </span>
-
-                        <p>"I always receive compliments on my makeup thanks to Lumera Beauty."</p>
-                        <span class="reviewer">- Emily Johnson</span>
-
-                        <div>
-                            <img src="/assets/images/LoginImg.png" alt="Emily Johnson" class="customer-img">
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-
-            <section id="social" class="container">
-                <h2>JOIN THE L'BALM GLOW COMMUNITY</h2>
-                <p>Subscribe to our news letter and get 10% off your first order.</p>
-                <form class="social-form">
-                    <input type="email" placeholder="Enter your email" class="form-input" required>
-                    <button type="submit" class="social-btn">Subscribe</button>
-                </form>
-
-                <h3>FOLLOW US ON INSTAGRAM</h3>
-                <a href="https://www.instagram.com/lbalm_beauty/" target="_blank">@lbalm_beauty</a>
-
-                <div class="promo-shots">
-                    <img src="/assets/images/LoginImg.png" alt="Promo 1" />
-                    <img src="/assets/images/LoginImg.png" alt="Promo 2" />
-                    <img src="/assets/images/LoginImg.png" alt="Promo 3" />
-                    <img src="/assets/images/LoginImg.png" alt="Promo 4" />
-                </div>
-            </section>
-
-            <section id="contact" class="container">
-                <h2>CONTACT US</h2>
-                <div class="contact-grid">
-                    <article class="contact-card">
-                        <i class="ri-mail-line"></i>
-                        <h3>Email</h3>
-                        <p>info@lbalmbeauty.com</p>
-                    </article>
-
-                    <article class="contact-card">
-                        <i class="ri-phone-line"></i>
-                        <h3>Phone</h3>
-                        <p>+1 (555) 123-4567</p>
-                    </article>
-
-                    <article class="contact-card">
-                        <i class="ri-map-pin-line"></i>
-                        <h3>Address</h3>
-                        <p>123 Beauty Street, Skincare City</p>
-                    </article>
-                </div>
-            </section>
-
-        </main>
-
-
-        <footer class="container">
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <span class="logo">L'BALM<br /></span>
-                    <span class="logo-subline">Beauty</span>
-                </div>
-
-                <div class="footer-links">
-                    <div class="quick-links">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="lbalm.html">Home</a></li>
-                            <li><a href="shop.html">Shop</a></li>
-                            <li><a href="collections.html">Collections</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="customer-care">
-                        <h4>Customer Care</h4>
-                        <ul>
-                            <li><a href="faqs.html">FAQs</a></li>
-                            <li><a href="shipping.html">Shipping & Delivery</a></li>
-                            <li><a href="returns.html">Returns</a></li>
-                            <li><a href="track-order.html">Track Order</a></li>
-                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p><span>Email:</span> info@lbalm-beauty.com</p>
-                    <p><span>Phone:</span> +1 (123) 456-7890</p>
-                </div>
+            <ul class="hero-points">
+              <li><i class="ri-shield-check-line"></i>100% authentic</li>
+              <li><i class="ri-lock-line"></i>Secure payment</li>
+              <li>
+                <i class="ri-truck-line"></i>Complimentary delivery over ₦50,000
+              </li>
+            </ul>
+          </div>
+          <div class="hero-visual">
+            <img
+              src="../assets/images/hero-image.jpg"
+              alt="Woman applying L'Balm facial serum"
+              class="hero-image"
+              width="600"
+              height="800"
+            />
+            <div class="hero-badge">
+              The glow ritual<b>Skincare essentials</b>
             </div>
-
-            <hr />
-
-            <div class="footer-bottom">
-                <p class="copyright">&copy; 2026 L'Balm Beauty. All rights reserved.</p>
-
-                <div class="payment-icons">
-                    <img src="/assets/logos/visa-classic-svgrepo-com.svg" alt="Visa" />
-                    <img src="/assets/logos/mastercard-old-svgrepo-com.svg" alt="Mastercard" />
-                    <img src="/assets/logos/paypal-svgrepo-com.svg" alt="PayPal" />
-                </div>
+          </div>
+        </div>
+      </section>
+      <div class="promo-banner">
+        <div class="container">
+          <div class="banner">
+            <i class="ri-truck-line"></i>
+            <p class="head">Free Shipping</p>
+            <p class="descr">Orders over ₦50,000</p>
+          </div>
+          <div class="banner">
+            <i class="ri-shield-check-line"></i>
+            <p class="head">100% Authentic</p>
+            <p class="descr">Quality products</p>
+          </div>
+          <div class="banner">
+            <i class="ri-lock-line"></i>
+            <p class="head">Secure Payment</p>
+            <p class="descr">100% secure</p>
+          </div>
+        </div>
+      </div>
+      <section id="category">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Discover</span>
+            <h2>Shop by Category</h2>
+          </div>
+          <div class="tiles">
+            <a class="tile reveal" href="shop.html?category=skincare"
+              ><img
+                src="../assets/images/product-placeholder.jpg"
+                alt="Skincare"
+                loading="lazy"
+                style="object-position: 50% 62%"
+              /><span>Skincare<small>Explore</small></span></a
+            >
+            <a class="tile reveal" href="shop.html?category=makeup"
+              ><img
+                src="../assets/images/product-placeholder.jpg"
+                alt="Makeup"
+                loading="lazy"
+                style="object-position: 50% 28%"
+              /><span>Makeup<small>Explore</small></span></a
+            >
+            <a class="tile reveal" href="shop.html?category=haircare"
+              ><img
+                src="../assets/images/product-placeholder.jpg"
+                alt="Haircare"
+                loading="lazy"
+                style="object-position: 50% 88%"
+              /><span>Haircare<small>Explore</small></span></a
+            >
+            <a class="tile reveal" href="shop.html?category=fragrance"
+              ><img
+                src="../assets/images/product-placeholder.jpg"
+                alt="Fragrance"
+                loading="lazy"
+                style="object-position: 30% 55%"
+              /><span>Fragrance<small>Explore</small></span></a
+            >
+          </div>
+        </div>
+      </section>
+      <section id="best-sellers" class="bg-soft">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Most loved</span>
+            <h2>Best Sellers</h2>
+          </div>
+          <div class="grid" data-render="bestsellers"></div>
+          <p style="text-align: center; margin-top: 3rem">
+            <a class="link-arrow" href="shop.html">View all products</a>
+          </p>
+        </div>
+      </section>
+      <section id="philosophy">
+        <div class="container split">
+          <div class="media reveal">
+            <img
+              src="../assets/images/product-placeholder.jpg"
+              alt="L'Balm products styled with flowers"
+              loading="lazy"
+            />
+          </div>
+          <div class="text reveal">
+            <span class="eyebrow">Our philosophy</span>
+            <h2>Skincare that begins with listening</h2>
+            <p>
+              At L'Balm, every formula starts with one question: what does your
+              skin actually need? We keep routines simple, ingredients
+              purposeful and the experience unhurried, so caring for your skin
+              feels like a ritual, not a chore.
+            </p>
+            <p>
+              From the first drop of serum to the last stroke of colour, we
+              design for confidence that lasts well beyond the mirror.
+            </p>
+            <a class="link-arrow" href="about.html">Our story</a>
+          </div>
+        </div>
+      </section>
+      <section id="ritual" class="bg-soft">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Your routine</span>
+            <h2>The L'Balm Ritual</h2>
+            <p>
+              Three considered steps for skin that feels as good as it looks.
+            </p>
+          </div>
+          <div class="steps">
+            <div class="step reveal">
+              <span class="num">01</span>
+              <h3>Cleanse</h3>
+              <p>
+                Purify gently, without stripping your skin’s natural moisture.
+              </p>
+              <a class="link-arrow" href="product.html?id=radiant-gel-cleanser"
+                >Radiant Gel Cleanser</a
+              >
             </div>
-        </footer>
-
-        <script src="/js/search-bar.js"></script>
-    </body>
+            <div class="step reveal">
+              <span class="num">02</span>
+              <h3>Treat</h3>
+              <p>Brighten and hydrate with a lightweight, glow-giving serum.</p>
+              <a class="link-arrow" href="product.html?id=rose-glow-serum"
+                >Rose Glow Serum</a
+              >
+            </div>
+            <div class="step reveal">
+              <span class="num">03</span>
+              <h3>Protect</h3>
+              <p>
+                Finish with broad-spectrum protection that feels weightless.
+              </p>
+              <a
+                class="link-arrow"
+                href="product.html?id=hydra-shield-sunscreen"
+                >Hydra Shield Sunscreen</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="why-us">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">The L'Balm promise</span>
+            <h2>Why Choose L'Balm?</h2>
+          </div>
+          <div class="why-details">
+            <div class="why-text-container reveal">
+              <div class="why-icon"><i class="ri-leaf-line"></i></div>
+              <div class="why-descr">
+                <span class="why-t">Premium Ingredients</span>
+                <p>Only the finest for your skin</p>
+              </div>
+            </div>
+            <div class="why-text-container reveal">
+              <div class="why-icon"><i class="ri-flask-line"></i></div>
+              <div class="why-descr">
+                <span class="why-t">Dermatologist Tested</span>
+                <p>Safe and effective for all skin types</p>
+              </div>
+            </div>
+            <div class="why-text-container reveal">
+              <div class="why-icon"><i class="ri-heart-line"></i></div>
+              <div class="why-descr">
+                <span class="why-t">Cruelty Free</span>
+                <p>We never test on animals</p>
+              </div>
+            </div>
+            <div class="why-text-container reveal">
+              <div class="why-icon"><i class="ri-recycle-line"></i></div>
+              <div class="why-descr">
+                <span class="why-t">Eco-Friendly Packaging</span>
+                <p>Made from sustainable materials</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="customer-feedback" class="bg-soft">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Kind words</span>
+            <h2>What Our Customers Say</h2>
+          </div>
+          <!-- SAMPLE REVIEWS: replace with real customer reviews (with permission) before launch -->
+          <div class="feedback-grid">
+            <article class="feedback-card reveal">
+              <span class="stars"
+                ><i class="ri-star-fill"></i><i class="ri-star-fill"></i
+                ><i class="ri-star-fill"></i><i class="ri-star-fill"></i
+                ><i class="ri-star-fill"></i
+              ></span>
+              <p>
+                “I love L'Balm Beauty! Their products have transformed my
+                skincare routine.”
+              </p>
+              <div class="avatar" aria-hidden="true">A</div>
+              <span class="reviewer">Amaka O.</span>
+            </article>
+            <article class="feedback-card reveal">
+              <span class="stars"
+                ><i class="ri-star-fill"></i><i class="ri-star-fill"></i
+                ><i class="ri-star-fill"></i><i class="ri-star-fill"></i
+                ><i class="ri-star-fill"></i
+              ></span>
+              <p>
+                “The quality and authenticity of their products are unmatched.”
+              </p>
+              <div class="avatar" aria-hidden="true">T</div>
+              <span class="reviewer">Tolu A.</span>
+            </article>
+            <article class="feedback-card reveal">
+              <span class="stars"
+                ><i class="ri-star-fill"></i><i class="ri-star-fill"></i
+                ><i class="ri-star-fill"></i><i class="ri-star-fill"></i
+                ><i class="ri-star-fill"></i
+              ></span>
+              <p>
+                “I always receive compliments on my makeup thanks to L'Balm
+                Beauty.”
+              </p>
+              <div class="avatar" aria-hidden="true">S</div>
+              <span class="reviewer">Sophia R.</span>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="concierge">
+        <div class="container reveal">
+          <span class="eyebrow" style="color: #e0cdb8">Personal guidance</span>
+          <h2>Not sure where to begin?</h2>
+          <p>
+            Message our team on WhatsApp and we will help you choose the right
+            products for your skin.
+          </p>
+          <a
+            class="btn"
+            href="https://wa.me/2340000000000"
+            target="_blank"
+            rel="noopener"
+            >Chat on WhatsApp</a
+          >
+        </div>
+      </section>
+      <section id="social">
+        <div class="container">
+          <div class="section-head reveal" style="margin-bottom: 1rem">
+            <span class="eyebrow">Stay close</span>
+            <h2>Join the L'Balm Glow Community</h2>
+            <p>Subscribe to our newsletter and get 10% off your first order.</p>
+          </div>
+          <form class="social-form">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="form-input"
+              aria-label="Email address"
+              required
+            /><button type="submit" class="social-btn">Subscribe</button>
+          </form>
+          <p class="form-note" role="status"></p>
+          <h3
+            style="
+              margin-top: 2.5rem;
+              font-size: 0.8rem;
+              letter-spacing: 0.25em;
+              font-family: var(--body-font);
+            "
+          >
+            FOLLOW US ON INSTAGRAM
+          </h3>
+          <a
+            href="https://www.instagram.com/lbalm_beauty/"
+            target="_blank"
+            rel="noopener"
+            class="link-arrow"
+            >@lbalm_beauty</a
+          >
+          <div class="promo-shots">
+            <img
+              src="../assets/images/product-placeholder.jpg"
+              alt="L'Balm on Instagram"
+              loading="lazy"
+            /><img
+              src="../assets/images/product-placeholder.jpg"
+              alt="L'Balm on Instagram"
+              loading="lazy"
+              style="object-position: 50% 25%"
+            /><img
+              src="../assets/images/product-placeholder.jpg"
+              alt="L'Balm on Instagram"
+              loading="lazy"
+              style="object-position: 50% 90%"
+            /><img
+              src="../assets/images/product-placeholder.jpg"
+              alt="L'Balm on Instagram"
+              loading="lazy"
+              style="object-position: 30% 50%"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-logo">
+            <span class="logo">L'BALM</span
+            ><span class="logo-subline">BEAUTY</span>
+            <p>
+              Luxury skincare and cosmetics, crafted for confidence and
+              radiance.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div class="quick-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="lbalm.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="customer-care">
+              <h4>Customer Care</h4>
+              <ul>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="shipping.html">Shipping &amp; Delivery</a></li>
+                <li><a href="returns.html">Returns</a></li>
+                <li><a href="track-order.html">Track Order</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p><span>Email:</span>info@lbalmbeauty.com</p>
+            <p><span>Phone:</span>+234 800 000 0000</p>
+            <p>
+              <span>Instagram:</span
+              ><a
+                href="https://www.instagram.com/lbalm_beauty/"
+                target="_blank"
+                rel="noopener"
+                >@lbalm_beauty</a
+              >
+            </p>
+          </div>
+        </div>
+        <hr />
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; 2026 L'Balm Beauty. All rights reserved.
+          </p>
+          <div class="payment-icons" aria-label="Accepted payments">
+            <span class="pay">Visa</span><span class="pay">Mastercard</span
+            ><span class="pay">Bank transfer</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/products.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/search-bar.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/pages.js"></script>
+  </body>
 </html>

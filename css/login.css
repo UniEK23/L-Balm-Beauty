@@ -1,142 +1,26 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4efe8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #2f2f2f;
-}
-
-.container {
-    background-color: #fcfaf7;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 800px;
-    height: 700px;
-}
-
-.image-container {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.login-image {
-    width: 100%;
-    height: 100%;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-}
-
-.login-container {
-    width: 50%;
-    height: 100%;
-    padding: 40px;
-    background-color: #fcfaf7;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.login-container h1 {
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-weight: 800;
-}
-
-.login-container p {
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    margin-bottom: 5px;
-    display: block;
-    font-size: 16px;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 7px;
-    border: 1px solid #e8ded4;
-    border-radius: 4px;
-}
-
-input:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(203, 152, 120, 0.5);
-    border: 2px solid #cb9b78;
-}
-
-input[placeholder] {
-    color: #777;
-    font-size: 14px;
-}
-
-button {
-    padding: 16px;
-    background-color: #a87d63;
-    border: none;
-    border-radius: 4px;
-    color: #fcfaf7;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-button:hover {
-    background-color: #5a4337;
-}
-
-button:active {
-    background-color: #f4efe8;
-    border: 2px solid #cb9878;
-    color: #cb9878;
-}
-
-button:focus {
-    box-shadow: 0 0 5px rgba(203, 152, 120, 0.5);
-    border: 2px solid #cb9b78;
-    outline: none;
-}
-
-.password-reset {
-    margin-bottom: 20px;
-}
-
-a {
-    text-decoration: underline;
-    color: #cb9878;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.signup-link {
-    text-align: center;
-    margin-top: 20px;
-}
+/* Login + Register (shared). Based on your original design, now responsive. */
+:root{--bg:#f4efe8;--card:#fcfaf7;--line:#e8ded4;--brown:#a87d63;--dark:#5a4337;--accent:#cb9b78}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:var(--bg);color:#2f2f2f;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1.2rem}
+.auth-card{background:var(--card);border-radius:6px;box-shadow:0 20px 60px #5a43371f;display:grid;grid-template-columns:1fr 1fr;width:min(900px,100%);min-height:620px;overflow:hidden}
+.auth-visual{position:relative;background:#f1e4da}
+.auth-visual img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.auth-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,#2f1d1480)}
+.auth-visual p{position:absolute;left:1.6rem;right:1.6rem;bottom:1.8rem;z-index:2;color:#fff;font-family:'Playfair Display',serif;font-style:italic;font-size:1.3rem;line-height:1.3}
+.auth-panel{padding:clamp(1.8rem,5vw,3rem);display:flex;flex-direction:column;justify-content:center}
+.back{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--brown);text-decoration:none;margin-bottom:1.6rem;display:inline-block}.back:hover{color:var(--dark)}
+.auth-panel h1{font-family:'Playfair Display',serif;font-weight:500;font-size:2.1rem;color:var(--dark);text-align:center}
+.welcome-msg{text-align:center;color:#777;margin:.4rem 0 1.8rem}
+form{display:flex;flex-direction:column}
+.form-group{margin-bottom:1.1rem}
+.form-group label{display:block;margin-bottom:.35rem;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#6b5a4d}
+.form-group input{width:100%;padding:.75rem .85rem;border:1px solid var(--line);border-radius:3px;background:#fff;font:inherit}
+input:focus{outline:none;box-shadow:0 0 0 3px #cb987826;border-color:var(--accent)}
+button[type=submit]{padding:1rem;background:var(--brown);border:1px solid var(--brown);color:#fcfaf7;cursor:pointer;font:500 12px 'Poppins',sans-serif;letter-spacing:.22em;text-transform:uppercase;transition:background .3s}
+button[type=submit]:hover{background:var(--dark);border-color:var(--dark)}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #b8935f;outline-offset:2px}
+.password-reset{margin:-.2rem 0 1.2rem;text-align:right}
+a{color:var(--accent);font-size:13px;font-weight:600}
+.signup-link,.login-link{text-align:center;margin-top:1.4rem;font-size:13px;color:#6b5a4d}
+.auth-msg{margin-top:1rem;padding:.8rem 1rem;background:#f4efe8;border-left:3px solid #b8935f;font-size:13px}
+@media (max-width:720px){.auth-card{grid-template-columns:1fr;min-height:0}.auth-visual{height:170px}.auth-visual p{font-size:1.05rem;bottom:1rem}}

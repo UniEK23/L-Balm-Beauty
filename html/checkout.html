@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — L'Balm Beauty</title>
+<meta name="description" content="Complete your L'Balm Beauty order.">
+<script>document.documentElement.classList.add('js')</script>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/lbalm_home.css">
+<link rel="stylesheet" href="../css/pages.css">
+</head>
+<body data-page="checkout" data-nav="shop">
+<a class="skip" href="#main">Skip to content</a>
+<div class="announce"><p>Complimentary delivery on orders over ₦50,000</p></div>
+<header class="site-header">
+  <div class="header-container">
+    <button class="hamburger icon" aria-label="Open menu" aria-expanded="false"><i class="ri-menu-line"></i></button>
+    <nav class="navigation" aria-label="Main">
+      <button class="close-menu icon" aria-label="Close menu"><i class="ri-close-large-line"></i></button>
+      <ul>
+        <li><a href="lbalm.html" data-nav="home">Home</a></li>
+        <li><a href="shop.html" data-nav="shop">Shop</a></li>
+        <li><a href="collections.html" data-nav="collections">Collections</a></li>
+        <li><a href="about.html" data-nav="about">About</a></li>
+        <li><a href="contact.html" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="logo-container"><a href="lbalm.html" aria-label="L'Balm Beauty home"><span class="logo">L'BALM</span><span class="logo-subline">BEAUTY</span></a></div>
+    <div class="user-icons">
+      <button class="search-icon icon" aria-label="Search" aria-expanded="false"><i class="ri-search-2-line"></i></button>
+      <a href="login.html" class="icon" aria-label="Account"><i class="ri-user-line"></i></a>
+      <a href="cart.html" class="icon cart-link" aria-label="Shopping bag"><i class="ri-shopping-bag-4-line"></i><span class="cart-count" hidden>0</span></a>
+    </div>
+  </div>
+  <div class="search-box" hidden>
+    <form class="search-form" role="search"><input type="search" class="search-input" placeholder="Search serums, lipsticks, fragrances…" aria-label="Search products" autocomplete="off"><ul class="search-results"></ul></form>
+  </div>
+</header>
+<div class="nav-overlay"></div>
+<main id="main">
+<section class="page-hero"><div class="container"><div class="crumbs"><a href="lbalm.html">Home</a><span>/</span>Checkout</div><h1>Checkout</h1><p>Tell us where to send your order.</p></div></section><section class="pg-section"><div class="container"><div class="cart-layout"><form id="co" class="reveal"><h3 style="margin-bottom:1rem">Delivery details</h3><div class="form-grid two"><div class="field"><label for="a1">Full name</label><input id="a1" name="name" required autocomplete="name"></div><div class="field"><label for="a2">Phone</label><input id="a2" name="phone" type="tel" required autocomplete="tel"></div><div class="field full"><label for="a3">Email</label><input id="a3" name="email" type="email" required autocomplete="email"></div><div class="field full"><label for="a4">Address</label><input id="a4" name="address" required autocomplete="street-address"></div><div class="field"><label for="a5">City</label><input id="a5" name="city" required></div><div class="field"><label for="a6">State</label><input id="a6" name="state" required></div><div class="field full"><label for="a7">Order notes (optional)</label><textarea id="a7" name="notes" rows="3"></textarea></div></div>
+<h3 style="margin:2rem 0 1rem">Payment</h3><div class="form-grid"><label class="radio"><input type="radio" name="pay" value="Bank transfer" checked><span>Bank transfer<small>Account details are sent to you on confirmation.</small></span></label><label class="radio"><input type="radio" name="pay" value="Pay on confirmation (WhatsApp)"><span>Confirm on WhatsApp<small>We confirm availability and share a payment link.</small></span></label></div>
+<button class="cta" style="margin-top:1.4rem;width:100%" type="submit">Place order on WhatsApp</button><div class="msg" id="done" hidden>Your order request has opened in WhatsApp. Please send the message to confirm. We will reply with your payment details.</div></form>
+<aside class="summary"><h3>Order summary</h3><div id="sum"></div><p class="note">Secure checkout. Your details are only used to process this order.</p></aside></div></div></section></main>
+<footer>
+  <div class="container">
+    <div class="footer-container">
+      <div class="footer-logo"><span class="logo">L'BALM</span><span class="logo-subline">BEAUTY</span><p>Luxury skincare and cosmetics, crafted for confidence and radiance.</p></div>
+      <div class="footer-links">
+        <div class="quick-links"><h4>Quick Links</h4><ul><li><a href="lbalm.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="collections.html">Collections</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="customer-care"><h4>Customer Care</h4><ul><li><a href="faqs.html">FAQs</a></li><li><a href="shipping.html">Shipping &amp; Delivery</a></li><li><a href="returns.html">Returns</a></li><li><a href="track-order.html">Track Order</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li></ul></div>
+      </div>
+      <div class="footer-contact"><h4>Contact Us</h4><p><span>Email:</span>info@lbalmbeauty.com</p><p><span>Phone:</span>+234 800 000 0000</p><p><span>Instagram:</span><a href="https://www.instagram.com/lbalm_beauty/" target="_blank" rel="noopener">@lbalm_beauty</a></p></div>
+    </div>
+    <hr>
+    <div class="footer-bottom">
+      <p class="copyright">&copy; 2026 L'Balm Beauty. All rights reserved.</p>
+      <div class="payment-icons" aria-label="Accepted payments"><span class="pay">Visa</span><span class="pay">Mastercard</span><span class="pay">Bank transfer</span></div>
+    </div>
+  </div>
+</footer>
+<script src="../js/products.js"></script>
+<script src="../js/cart.js"></script>
+<script src="../js/search-bar.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/pages.js"></script>
+</body>
+</html>
